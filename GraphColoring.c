@@ -5,6 +5,8 @@ int graph[100][100];
 int color[100];
 int V; 
 
+void printSolution();
+
 bool isSafe(int v, int c) {
     for (int i = 0; i < V; i++) {
         if (graph[v][i] && color[i] == c) {
@@ -14,25 +16,48 @@ bool isSafe(int v, int c) {
     return true;
 }
 
+// bool graphColoring(int v, int m) {
+//     if (v == V) {
+//         return true; 
+//     }
+
+//     for (int c = 1; c <= m; c++) {
+//         if (isSafe(v, c)) {
+//             color[v] = c;
+
+//             if (graphColoring(v + 1, m)) {
+//                 return true;
+//             }
+
+//             color[v] = 0; 
+//         }
+//     }
+
+//     return false;
+// }
+
 bool graphColoring(int v, int m) {
     if (v == V) {
-        return true; 
+        printSolution();
+        return false;  // Return false to continue searching for more solutions
     }
 
     for (int c = 1; c <= m; c++) {
         if (isSafe(v, c)) {
             color[v] = c;
 
+            // Continue to next vertex
             if (graphColoring(v + 1, m)) {
-                return true;
+                // No need for return here, as we continue searching for more solutions
             }
 
-            color[v] = 0; 
+            color[v] = 0;  // Backtrack if no valid solution was found
         }
     }
 
-    return false;
+    return false;  // If no valid color assignments were found
 }
+
 
 void printSolution() {
     printf("Vertex Color Assignment:\n");
