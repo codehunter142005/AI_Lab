@@ -1,3 +1,5 @@
+//BFS DFS
+
 #include <stdio.h>
 #include <stdlib.h>
 
