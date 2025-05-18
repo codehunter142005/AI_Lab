@@ -134,18 +134,31 @@ void compTurn(int board[]) {
 }
 
 int analyzeBoard(int board[]) {
-    int cb[8][3] = {
-        {0, 1, 2}, {3, 4, 5}, {6, 7, 8},
-        {0, 3, 6}, {1, 4, 7}, {2, 5, 8},
-        {0, 4, 8}, {2, 4, 6}
-    };
-
-    for (int i = 0; i < 8; i++) {
-        if (board[cb[i][0]] != 0 &&
-            board[cb[i][0]] == board[cb[i][1]] &&
-            board[cb[i][0]] == board[cb[i][2]]) {
-            return board[cb[i][2]];
+    // Check rows
+    for (int row = 0; row < 3; row++) {
+        int index = row * 3;  // Starting index of the row
+        if (board[index] != 0 && board[index] == board[index+1] && board[index] == board[index+2]) {
+            return board[index];  // Return winner
         }
     }
+    
+    // Check columns
+    for (int col = 0; col < 3; col++) {
+        if (board[col] != 0 && board[col] == board[col+3] && board[col] == board[col+6]) {
+            return board[col];  // Return winner
+        }
+    }
+    
+    // Check diagonal (top-left to bottom-right)
+    if (board[0] != 0 && board[0] == board[4] && board[0] == board[8]) {
+        return board[0];  // Return winner
+    }
+    
+    // Check diagonal (top-right to bottom-left)
+    if (board[2] != 0 && board[2] == board[4] && board[2] == board[6]) {
+        return board[2];  // Return winner
+    }
+    
+    // No winner
     return 0;
 }
