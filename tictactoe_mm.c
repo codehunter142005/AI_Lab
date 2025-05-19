@@ -164,3 +164,83 @@ int analyzeBoard(int board[]) {
     // No winner
     return 0;
 }
+
+// Enter 1 for single player, 2 for multiplayer: 1
+// Computer : O Vs. You : X
+// Enter to play 1(st) or 2(nd) : 1
+
+// Current State Of Board : 
+
+// - - - 
+// - - - 
+// - - - 
+
+// Enter X's position from [1...9]: 5
+
+// Current State Of Board : 
+
+// - - - 
+// - X - 
+// - - - 
+
+// Computer places O at position 1:
+// Current State Of Board : 
+
+// O - - 
+// - X - 
+// - - - 
+
+// Enter X's position from [1...9]: 9
+
+// Current State Of Board : 
+
+// O - - 
+// - X - 
+// - - X 
+
+// Computer places O at position 7:
+// Current State Of Board : 
+
+// O - - 
+// - X - 
+// O - X 
+
+// Enter X's position from [1...9]: 4
+
+// Current State Of Board : 
+
+// O - - 
+// X X - 
+// O - X 
+
+// Computer places O at position 6:
+// Current State Of Board : 
+
+// O - - 
+// X X O 
+// O - X 
+
+// Enter X's position from [1...9]: 3
+
+// Current State Of Board : 
+
+// O - X 
+// X X O 
+// O - X 
+
+// Computer places O at position 2:
+// Current State Of Board : 
+
+// O O X 
+// X X O 
+// O - X 
+
+// Enter X's position from [1...9]: 8
+
+// Current State Of Board : 
+
+// O O X 
+// X X O 
+// O X X 
+
+// X Lose!!! O Wins !!!!
