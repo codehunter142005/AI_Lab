@@ -104,3 +104,83 @@ int analyzeBoard(int board[]) {
     // No winner
     return 0;
 }
+
+// Current State Of Board : 
+
+// - - - 
+// - - - 
+// - - - 
+
+// Enter X's position from [1...9]: 5
+
+// Current State Of Board : 
+
+// - - - 
+// - X - 
+// - - - 
+
+// Enter O's position from [1...9]: 1
+
+// Current State Of Board : 
+
+// O - - 
+// - X - 
+// - - - 
+
+// Enter X's position from [1...9]: 9
+
+// Current State Of Board : 
+
+// O - - 
+// - X - 
+// - - X 
+
+// Enter O's position from [1...9]: 3
+
+// Current State Of Board : 
+
+// O - O 
+// - X - 
+// - - X 
+
+// Enter X's position from [1...9]: 7
+
+// Current State Of Board : 
+
+// O - O 
+// - X - 
+// X - X 
+
+// Enter O's position from [1...9]: 4
+
+// Current State Of Board : 
+
+// O - O 
+// O X - 
+// X - X 
+
+// Enter X's position from [1...9]: 2
+
+// Current State Of Board : 
+
+// O X O 
+// O X - 
+// X - X 
+
+// Enter O's position from [1...9]: 8
+
+// Current State Of Board : 
+
+// O X O 
+// O X - 
+// X O X 
+
+// Enter X's position from [1...9]: 6
+
+// Current State Of Board : 
+
+// O X O 
+// O X X 
+// X O X 
+
+// Draw!!!
